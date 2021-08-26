@@ -28,6 +28,7 @@ $ jest <filename>
 2. [Snapshot](https://jestjs.io/docs/snapshot-testing) testing. Can be used for comparing responses between different API versions or builds or environments.   
 3. [Mocked](https://jestjs.io/docs/mock-functions) testing. Can be used for complex scenarios or for slow and unstable environments.  
 4. [Parallel](https://jestjs.io/docs/api#testconcurrentname-fn-timeout) testing. Can be used to reduce execution time.
-5. UI integration. There are number of JS UI frameworks: Nightwatch, Playwright, etc. Can be used to check UI elements or perform actions that are not available with the API.
+5. Dynamic fetching of OpenAPI spec though GET request. Will eliminate need to store and maintain local copy of the spec.  
+6. UI integration. There are number of JS UI frameworks: Nightwatch, Playwright, etc. Can be used to check UI elements or perform actions that are not available with the API.
 
 This list can continue depending on project needs and requirements.
