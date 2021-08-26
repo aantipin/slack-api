@@ -54,4 +54,18 @@ describe("Post (Update/Delete) new message to the channel", () => {
         expect(message.response.status).toEqual(200);
         expect(message.response.body.ok).toEqual(true);
     });
+
+    tags('regression').test("Should return error if no text provided", async () => {
+        await message.post(channel, '')
+        expect(message.response.status).toEqual(200);
+        expect(message.response.body.ok).toEqual(false);
+        expect(message.response.body.error).toEqual('no_text');
+    });
+
+    tags('regression').test("Should return error if no channel provided", async () => {
+        await message.post('', 'Created ' + now)
+        expect(message.response.status).toEqual(200);
+        expect(message.response.body.ok).toEqual(false);
+        expect(message.response.body.error).toEqual('channel_not_found');
+    });
 });
