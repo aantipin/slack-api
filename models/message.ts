@@ -3,7 +3,7 @@ const path = require('path');
 import supertest from 'supertest'
 import jestOpenAPI from 'jest-openapi';
 
-jestOpenAPI(path.join(__dirname, '../schemas/message.yml'));
+jestOpenAPI(path.join(__dirname, '../openapi/message.yml'));
 
 const baseURL = 'https://slack.com';
 
